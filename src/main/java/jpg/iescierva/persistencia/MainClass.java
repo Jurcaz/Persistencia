@@ -1,6 +1,7 @@
 package jpg.iescierva.persistencia;
 
 import java.sql.Date;
+import java.util.Scanner;
 
 import jpg.iescierva.persistencia.dao.AlumnoDAO;
 import jpg.iescierva.persistencia.dao.AlumnoMysqlImpl;
@@ -10,21 +11,50 @@ import jpg.iescierva.persistencia.model.dto.AlumnoDTO;
 public class MainClass {
 
 	public static void main(String[] args) {
-		AlumnoDB alumnodb = new AlumnoDB();
-//		AlumnoDTO alumnoDTO = alumnodb.findByKey("234510");
-//		System.out.println(alumnoDTO.toString());
 		
-		
-
 		AlumnoDAO alumnoDAO = new AlumnoMysqlImpl();
+		Scanner sc = new Scanner(System.in);
+		int aux;
+		
+		System.out.println("Que operacion quiere realizar?");
+		
+		do {
+			aux = 0;
+			System.out.println("1. Crear usuario, 2. Actualizar usuario, 3. Eliminar usuario, 4. Consultar usuario");
+			aux = sc.nextInt();
+			switch (aux) {
+			case 1:
+				System.out.println("Introduzca nre");
+				
+				break;
+			case 2:
+				System.out.println(2);			
+				break;
+			case 3:
+				System.out.println(3);
+				break;
+			case 4:
+				System.out.println(4);
+				break;
+			case 5:
+				System.out.println(5);
+				break;
+			default:
+				break;
+			}
+			
+		} while (aux != 6);
+		
 		
 //		AlumnoDTO alumno1 = new AlumnoDTO("12234", "Piqueras", "Pedro", "asdas@ds.cock", "2", "b", "c", new Date(1999, 1, 1), "los ramos", "222222222", "222222222");
-		
-		for (AlumnoDTO x : alumnoDAO.consultarTodo()) {
-			System.out.println(x.toString());
-		}
-		
+//
+//		alumnoDAO.crear(alumno1);
+//		
+//		for (AlumnoDTO x : alumnoDAO.consultarTodo()) {
+//			System.out.println(x.toString());
+//		}
+//		
+//		alumnoDAO.eliminar(alumno1);
 		
 	}
-
 }
