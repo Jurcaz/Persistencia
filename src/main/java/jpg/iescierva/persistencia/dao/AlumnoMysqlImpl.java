@@ -44,8 +44,6 @@ public class AlumnoMysqlImpl implements AlumnoDAO {
 			e.printStackTrace();
 		}
 
-		
-		
 	}
 
 	@Override
@@ -79,8 +77,6 @@ public class AlumnoMysqlImpl implements AlumnoDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		
 		
 	}
 
