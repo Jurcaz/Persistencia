@@ -12,6 +12,13 @@ public class MatriculaDTO {
 		this.titulacion = pTitulacion;
 	}
 	
+	public MatriculaDTO(int pIdMatricula, String pNre, String pCurso, String pTitulacion) {
+		this.id_matricula = pIdMatricula;
+		this.nre = pNre;
+		this.curso = pCurso;
+		this.titulacion = pTitulacion;
+	}
+	
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("MatriculaDTO [id_matricula=");

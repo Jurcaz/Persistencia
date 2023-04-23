@@ -17,9 +17,13 @@ public class MainClass {
 		
 		MatriculaDAO matriculaDAO = new MatriculaMysqlImpl();
 		
-		matriculaDAO.crear(new MatriculaDTO("121212", "2", "DAW"));
+		matriculaDAO.crear(new MatriculaDTO("121552", "2", "dam"));
 		
-		System.out.println(matriculaDAO.consultar(1));
+		for (MatriculaDTO m : matriculaDAO.consultarTodo()) {
+			System.out.println(m.toString());
+		}
+		
+
 		
 //		AlumnoDAO alumnoDAO = new AlumnoMysqlImpl();
 //		Scanner sc = new Scanner(System.in);
